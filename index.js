@@ -30,7 +30,7 @@ app.use("/posts",postRoute);
 app.use("/chat",chatRoute);
 
 app.get("/",(req,res)=>{
-  res.send("postellar api")
+  res.send(`postellar api ${dbURI}`)
 })
 
 mongoose.connect(

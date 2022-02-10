@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ###
-GET https://postellar-server.herokuapp.com/login/test
+GET https://postellar-server.herokuapp.com/posts
 # Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MTIzNDU.gVEwAEw_NBnJktQbFLhzPEb8VyuZugkjATA6gDOoLPk
 
 ###
