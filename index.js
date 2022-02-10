@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
+const PORT = process.env.PORT || 4000;
 // const jwt = require("jsonwebtoken");
 
 app.use(
@@ -38,6 +39,6 @@ mongoose.connect(
   () => console.log("connect to mongodb")
 );
 
-app.listen(4000, () => {
-  console.log("Listening on 4000");
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });
