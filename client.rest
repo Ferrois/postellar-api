@@ -15,12 +15,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MTIzNDU.gVEwAEw_NBnJktQbFLhzPEb8VyuZu
 ###
 GET http://localhost:4000/posts
 ###
-POST http://localhost:4000/posts
+POST https://postellar-server.herokuapp.com/posts
 Content-Type: application/json
 
 {
-    "username": "TEstttqrwqer",
-    "title": "i ate a dog",
+    "username": "TEstttqr",
+    "title": "i ate 2 dog",
     "description": "woof woof rip lollololol"
 }
 

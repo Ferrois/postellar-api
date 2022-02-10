@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
-var dbURI = process.env.MONGO_URI
+var dbURI = process.env.MONGODB_URI
 
 // if (process.env.NODE_ENV === 'production'){
 //   dbURI = process.env.MONGOLAB_URI
