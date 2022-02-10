@@ -50,4 +50,8 @@ router.get("/", authenticateToken, async (req, res) => {
   console.log("auth")
 });
 
+router.get("/test",(req,res)=>{
+  res.send("test success")
+})
+
 module.exports = router;
