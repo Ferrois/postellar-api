@@ -34,8 +34,8 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:4000/chat
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MTIzNDU.gVEwAEw_NBnJktQbFLhzPEb8VyuZugkjATA6gDOoLPk
+GET https://postellar-server.herokuapp.com/login/test
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.MTIzNDU.gVEwAEw_NBnJktQbFLhzPEb8VyuZugkjATA6gDOoLPk
 
 ###
 GET http://postellar-server.herokuapp.com/login

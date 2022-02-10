@@ -3,6 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
+var dbURI = process.env.MONGO_URI
+
+// if (process.env.NODE_ENV === 'production'){
+//   dbURI = process.env.MONGOLAB_URI
+// }
 // const jwt = require("jsonwebtoken");
 
 app.use(
@@ -29,7 +34,7 @@ app.get("/",(req,res)=>{
 })
 
 mongoose.connect(
-  "mongodb+srv://ferrois1:ferrois1@cluster0.zxcdq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  `${dbURI}`,
   {
     useFindAndModify: false,
     useUnifiedTopology: true,
