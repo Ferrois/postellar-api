@@ -24,7 +24,9 @@ app.use("/register", registerRoute);
 app.use("/posts",postRoute);
 app.use("/chat",chatRoute);
 
-
+app.get("/",(req,res)=>{
+  res.send("postellar api")
+})
 
 mongoose.connect(
   "mongodb+srv://ferrois1:ferrois1@cluster0.zxcdq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
