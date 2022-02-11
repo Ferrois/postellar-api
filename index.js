@@ -10,7 +10,7 @@ const ChatSchema = require("./models/Chat.js");
 // }
 // const jwt = require("jsonwebtoken");
 
-app.get("/teste", authenticateToken, async (req,res) => {
+app.get("/teste", async (req,res) => {
   const chats = await ChatSchema.find().limit(100);
   res.json(chats);
 })
