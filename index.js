@@ -1,6 +1,7 @@
 const express = require("express");
 var https = require("https");
-var http = require("http")
+var http = require("http");
+require("dotenv").config();
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -42,23 +43,23 @@ app.get("/",(req,res)=>{
 
 mongoose.connect(
   `${dbURI}`,
-  {
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-    replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-  },
+  // {
+  //   useFindAndModify: false,
+  //   useUnifiedTopology: true,
+  //   useNewUrlParser: true,
+  //   useCreateIndex: true,
+  //   server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+  //   replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+  // },
   () => console.log("connect to mongodb")
 );
 
-// app.listen(PORT, () => {
-//   console.log(`Listening on ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
+});
 
-var server = http.createServer(app)
+// var server = http.createServer(app)
 
-server.listen(PORT,()=>{
-  console.log(`listening server at ${PORT}`)
-})
+// server.listen(PORT,()=>{
+//   console.log(`listening server at ${PORT}`)
+// })
