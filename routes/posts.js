@@ -20,8 +20,9 @@ function authenticateToken(req, res, next) {
 }
 
 router.get("/", async (req, res) => {
+  console.log("123")
   const posts = await PostSchema.find().limit(20);
-  console.log(posts);
+  console.log("456");
   res.json(posts);
 });
 
