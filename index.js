@@ -3,12 +3,17 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
-var dbURI = process.env.MONGODB_URI
-
+var dbURI = process.env.MONGODB_URI;
+const ChatSchema = require("./models/Chat.js");
 // if (process.env.NODE_ENV === 'production'){
 //   dbURI = process.env.MONGOLAB_URI
 // }
 // const jwt = require("jsonwebtoken");
+
+router.get("/teste", authenticateToken, async (req,res) => {
+  const chats = await ChatSchema.find().limit(100);
+  res.json(chats);
+})
 
 app.use(
   cors({
