@@ -1,5 +1,6 @@
 const express = require("express");
 var https = require("https");
+var http = require("http")
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -56,6 +57,8 @@ mongoose.connect(
 //   console.log(`Listening on ${PORT}`);
 // });
 
-var server = https.createServer(app).listen(PORT,()=>{
+var server = http.createServer(app)
+
+server.listen(PORT,()=>{
   console.log(`listening server at ${PORT}`)
 })
