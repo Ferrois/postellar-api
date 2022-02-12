@@ -30,8 +30,8 @@ router.post("/", async (req, res) => {
     res.json({ type: "error", message: "Wrong password!" });
     return;
   }
-  console.log("login");
-  console.log(process.env.ACCESS_TOKEN);
+  console.log(`${req.body.username} >Logged in`);
+  
   // res.json({
   //   type: "loginSuccess",
   //   message: `Logged in as ${req.body.username}!`,
@@ -47,7 +47,7 @@ router.post("/", async (req, res) => {
 
 router.get("/", authenticateToken, async (req, res) => {
   res.json({ username: req.user });
-  console.log("auth")
+  console.log(`${req.user} >Authenticated`)
 });
 
 router.get("/test",(req,res)=>{

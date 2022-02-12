@@ -20,9 +20,10 @@ router.post("/", async (req, res) => {
   if (existingUser.length !== 0) {
     res.json({ type: "error", message: "This username has been taken!" });
     // res.send("This username has been taken!");
-    console.log("exisitng user");
+    console.log("Tried to register existing username");
     return;
   }
+  console.log(`${req.body.username}>Register`)
   try {
     const savedLogin = await loginInfo.save();
     res.json(savedLogin);

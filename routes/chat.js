@@ -31,6 +31,7 @@ router.post("/", authenticateToken, async (req, res) => {
 });
 
 router.get("/", authenticateToken, async (req,res) => {
+  console.log(`${req.user} >View Chat`)
     const chats = await ChatSchema.find().limit(100);
     res.json(chats);
 })
