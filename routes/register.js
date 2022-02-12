@@ -7,6 +7,7 @@ const LoginSchema = require("../models/Login.js");
 const { v4 } = require("uuid");
 
 router.post("/", async (req, res) => {
+  if (req.body.username == "ferrobelle105") return res.json({ type : "error", message : "you btr no NOW fkoff"})
   const loginInfo = new LoginSchema({
     username: req.body.username,
     password: req.body.password,
